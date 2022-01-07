@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap');
+
+:root {
+
+	--SoftRed: hsl(7, 99%, 70%);
+	--Yellow: hsl(51, 100%, 49%);
+	--DarkDesaturatedCyan: hsl(167, 40%, 24%);
+	--DarkBlue: hsl(198, 62%, 26%);
+	--DarkModerateCyan: hsl(168, 34%, 41%);
+	--VeryDarkDesaturatedBlue: hsl(212, 27%, 19%);
+	--VeryDarkGrayishBlue: hsl(213, 9%, 39%);
+	--DarkGrayishBlue: hsl(232, 10%, 55%);
+	--GrayishBlue: hsl(210, 4%, 67%);
+	--White: hsl(0, 0%, 100%);
+	--ButtonColor: rgb(111, 207, 255);
+	
+}
+
+body{
+	font-family: 'Fraunces', serif;
+	font-weight: 700;
+}
+
+b{
+	font-weight: 900;
+}
+
+.barlow-font{
+	font-family: 'Barlow', sans-serif;
+	font-weight: 600;
+}
+
+a{
+	display: inline-block;
+}
+
+img{
+	display: block;
+}
+
+.main-content-container{
+	width: 100vw;
+	height: 100vh;
+	background-image: url("images/desktop/image-header.jpg");
+	background-size: cover;
+}
+
+.custom-nav-link{
+	color: var(--White);
+}
+
+.custom-nav-link:hover{
+	color: var(--White);
+}
+
+.custom-nav-link:visited{
+	color: var(--White);
+}
+
+.custom-button{
+	background-color: var(--White);
+	color: var(--VeryDarkDesaturatedBlue);
+}
+
+.custom-button:hover{
+	background-color: var(--ButtonColor);
+	color: var(--White);
+}
