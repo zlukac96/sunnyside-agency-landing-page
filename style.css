@@ -4,6 +4,7 @@
 
 	--SoftRed: hsl(7, 99%, 70%);
 	--Yellow: hsl(51, 100%, 49%);
+	--Red: #ff7969;
 	--DarkDesaturatedCyan: hsl(167, 40%, 24%);
 	--DarkBlue: hsl(198, 62%, 26%);
 	--DarkModerateCyan: hsl(168, 34%, 41%);
@@ -38,31 +39,181 @@ img{
 	display: block;
 }
 
+.body-heading{
+	color: var(--VeryDarkDesaturatedBlue);
+}
+
+.body-text{
+	font-family: 'Barlow', sans-serif;
+	color: var(--DarkGrayishBlue);
+}
+
+.body-text-picture{
+	font-family: 'Barlow', sans-serif;
+	color: var(--VeryDarkGrayishBlue);
+}
+
+.transparent-Text{
+	opacity: 0.8;
+}
+
+.body-link{
+	position: relative;
+	color: var(--VeryDarkDesaturatedBlue);
+	text-decoration: none;
+}
+
+.body-link:hover{
+	color: var(--VeryDarkDesaturatedBlue);
+}
+
+.body-link:visited{
+	color: var(--VeryDarkDesaturatedBlue);
+}
+
+.body-link::before{
+	content: "";
+	position: absolute;
+	height: 30%;
+	width: calc(100% + 10px);
+	bottom: 2px;
+	left: -5px;
+	border-radius: 20px;
+	pointer-events: none;
+	box-sizing: border-box;
+	z-index: -1;
+	opacity: 0.35;
+}
+
+.body-link:hover::before{
+	opacity: 1;
+}
+
+.body-link-yellow::before{
+	background-color: var(--Yellow);
+}
+
+.body-link-red::before{
+	background-color: var(--Red);
+}
+
 .main-content-container{
-	width: 100vw;
 	height: 100vh;
-	background-image: url("images/desktop/image-header.jpg");
+	background-image: url("images/mobile/image-header.jpg");
 	background-size: cover;
 }
 
 .custom-nav-link{
-	color: var(--White);
+	color: var(--DarkGrayishBlue);
 }
 
 .custom-nav-link:hover{
-	color: var(--White);
+	color: var(--DarkGrayishBlue);
 }
 
 .custom-nav-link:visited{
-	color: var(--White);
+	color: var(--DarkGrayishBlue);
 }
 
 .custom-button{
-	background-color: var(--White);
+	background-color: var(--Yellow);
 	color: var(--VeryDarkDesaturatedBlue);
 }
 
 .custom-button:hover{
-	background-color: var(--ButtonColor);
+	background-color: var(--Yellow);
 	color: var(--White);
+}
+
+.custom-hamburger-button{
+	margin: 8px 0;
+	font-size: 30px;
+	color: var(--White);
+	overflow: hidden;
+}
+
+.custom-hamburger-button > *{
+	transform: scale(2,1.5);
+}
+
+.custom-hamburger-button{
+	cursor: pointer;
+}
+
+.custom-nav-menu{
+	--arrowWidth: 30px;
+	position: absolute;
+	display: none;
+	right: 0;
+	top: calc(100% + var(--arrowWidth));
+	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: column;
+	background-color: var(--White);
+	width: 250px;
+	max-width: calc(100% - 3rem);
+	height: 250px;
+}
+
+.custom-nav-menu::before{
+	content: "";
+	border: var(--arrowWidth) solid;
+	border-color: transparent var(--White) transparent transparent;
+	position: absolute;
+	top: calc(0px - var(--arrowWidth));
+	height: 0;
+	width: 100%;
+	pointer-events: none;
+	box-sizing: border-box;
+}
+
+.cover-title{
+	color: var(--White);
+	text-align: center;
+	letter-spacing: 8px;
+}
+
+@media (min-width:768px) {
+	
+	.main-content-container{
+		background-image: url("images/desktop/image-header.jpg");
+	}
+
+	
+	.custom-nav-menu{
+		display: flex;
+		position: static;
+		width: 375px;
+		flex-direction: row;
+		background-color: transparent;
+		height: auto;
+		justify-content: space-between;	
+	}
+	
+	.custom-nav-menu::before{
+		display: none;
+	}
+	
+	.custom-button{
+		background-color: var(--White);
+		color: var(--VeryDarkDesaturatedBlue);
+	}
+	
+	.custom-button:hover{
+		background-color: var(--ButtonColor);
+		color: var(--White);
+	}
+	
+	.custom-nav-link{
+		color: var(--White);
+	}
+
+	.custom-nav-link:hover{
+		color: var(--White);
+	}
+
+	.custom-nav-link:visited{
+		color: var(--White);
+	}
+	
 }
