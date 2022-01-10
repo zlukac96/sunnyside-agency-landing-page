@@ -4,7 +4,6 @@
 
 	--SoftRed: hsl(7, 99%, 70%);
 	--Yellow: hsl(51, 100%, 49%);
-	--Red: #ff7969;
 	--DarkDesaturatedCyan: hsl(167, 40%, 24%);
 	--DarkBlue: hsl(198, 62%, 26%);
 	--DarkModerateCyan: hsl(168, 34%, 41%);
@@ -14,10 +13,12 @@
 	--GrayishBlue: hsl(210, 4%, 67%);
 	--White: hsl(0, 0%, 100%);
 	--ButtonColor: rgb(111, 207, 255);
+	--FooterColor: #90d4c5;
 	
 }
 
 body{
+	background-color: #fffbf8;
 	font-family: 'Fraunces', serif;
 	font-weight: 700;
 }
@@ -48,7 +49,7 @@ img{
 	color: var(--DarkGrayishBlue);
 }
 
-.body-text-picture{
+.body-text-dark{
 	font-family: 'Barlow', sans-serif;
 	color: var(--VeryDarkGrayishBlue);
 }
@@ -94,7 +95,7 @@ img{
 }
 
 .body-link-red::before{
-	background-color: var(--Red);
+	background-color: var(--SoftRed);
 }
 
 .main-content-container{
@@ -171,6 +172,27 @@ img{
 	color: var(--White);
 	text-align: center;
 	letter-spacing: 8px;
+}
+
+.testimonials-title{
+	color: var(--GrayishBlue);
+	letter-spacing: 8px;
+}
+
+.footer{
+	background-color: var(--FooterColor);
+}
+
+.footer a{
+	color: var(--DarkDesaturatedCyan);
+}
+
+.footer a:hover{
+	color: var(--White);
+}
+
+.footer-icons > *{
+	font-size: 30px;
 }
 
 @media (min-width:768px) {
